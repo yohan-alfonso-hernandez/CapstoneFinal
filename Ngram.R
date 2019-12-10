@@ -52,9 +52,9 @@ ngrams <- function(input){
         input_count <- str_count(input, boundary("word"))
         input_words <- unlist(str_split(input, boundary("word")))
         input_words <- tolower(input_words)
-        out <- ifelse(input_count == 0, "Please input a phrase",
+        out <- #ifelse(input_count == 0, "Please input a phrase",
                       ifelse(input_count == 3, fourgram(input_words),
-                             ifelse(input_count == 2, trigram(input_words), bigram(input_words))))
+                             ifelse(input_count == 2, trigram(input_words), bigram(input_words)))#)
         # Output
         return(out)
 }
